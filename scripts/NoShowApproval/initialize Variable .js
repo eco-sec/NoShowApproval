@@ -23,19 +23,14 @@ $.context.classEndDateDesc = formatDateEn($.context.classEndDate);
 $.context.classStartDateDescAr = formatDateAr($.context.classStartDate);
 $.context.classEndDateDescAr = formatDateAr($.context.classEndDate);
 
-$.context.LeaveRequestBody = {
-  "TrainingBookingSet": {
-    "TrainingBooking": {
-      "EmpNo": $.context.employeeId,
-      "TrainingType": "5500",
-      "BeginDate": $.context.classStartDate,
-      "EndDate": $.context.classEndDate,
-       "StartTime":$.context.classStartTime,
-        "EndTime": $.context.classEndTime,
-      "Simulation": "X"
-    }
-  }
-}
+// Include context.noShowCpiRequestBody
+$.context.noShowCpiRequestBody = {
+    "EmpNo": $.context.employeeId,
+    "classId": $.context.classId,
+    "BeginDate": $.context.classStartDate,  // Mapped from context
+    "EndDate": $.context.classEndDate,      // Mapped from context
+    "Decision": ""  // Holds "APPROVED" or "REJECTED"
+};
 
 
 function formatDateEnYYYYMMDD(dateStr) {

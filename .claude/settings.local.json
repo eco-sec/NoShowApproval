@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(do sed -i '' 's/noShow/cancellation/g' \"$file\")"
-    ],
-    "deny": [],
-    "ask": []
-  }
-}
